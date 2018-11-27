@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "899220790276",
+    "firebase_url": "https://momapp-e97c4.firebaseio.com",
+    "project_id": "momapp-e97c4",
+    "storage_bucket": "momapp-e97c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899220790276:android:ca81fcda2e19f092",
+        "android_client_info": {
+          "package_name": "ar.com.astun.momapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899220790276-jkuf6jeb0gdn308c1d24tee0fitnv3vb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.astun.momapp",
+            "certificate_hash": "499af21e10c17f3f271a42d3f53ccd098d67d710"
+          }
+        },
+        {
+          "client_id": "899220790276-7hsmrvol3ob4b85pes3o01d4nf90ul2d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.astun.momapp",
+            "certificate_hash": "0a1f99598aa2d7e3a644af5c6d3d84f6bae2baa6"
+          }
+        },
+        {
+          "client_id": "899220790276-qbqlggehsdf42h9a5nq0isauin9oh9ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRpcvxNs5CSkv8yVZhWAg4pXrSvKaWm9s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899220790276-qbqlggehsdf42h9a5nq0isauin9oh9ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
