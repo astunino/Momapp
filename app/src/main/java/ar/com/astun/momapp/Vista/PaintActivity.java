@@ -1,5 +1,6 @@
 package ar.com.astun.momapp.Vista;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ import ar.com.astun.momapp.R;
 import ar.com.astun.momapp.Util.ResultListener;
 
 
-public class PaintActivity extends AppCompatActivity {
+public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.AdapterListener{
 
     private List<Paint> datos = new ArrayList<>();
 
@@ -31,7 +32,7 @@ public class PaintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paint);
 
-        final AdaptadorMoma adaptadorPaint = new AdaptadorMoma(datos);
+        final AdaptadorMoma adaptadorPaint = new AdaptadorMoma(this,datos);
         final ControladorPaint controllerPaint = new ControladorPaint();
 
 
@@ -62,5 +63,20 @@ public class PaintActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(adaptadorPaint);
+    }
+
+    @Override
+    public void irDetalle(String nombre, String artistId,String imagen) {
+
+        Intent intent = new Intent(PaintActivity.this, PaintDetalleActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putString(PaintDetalleActivity.KEY_ARTISTID, artistId);
+        bundle.putString(PaintDetalleActivity.KEY_NAME, nombre);
+        bundle.putString(PaintDetalleActivity.KEY_IMAGEN, imagen);
+        // CHECK IN
+        intent.putExtras(bundle);
+
+        startActivity(intent);
     }
 }
