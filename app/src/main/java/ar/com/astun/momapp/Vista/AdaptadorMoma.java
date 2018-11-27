@@ -75,11 +75,11 @@ public class AdaptadorMoma extends RecyclerView.Adapter<AdaptadorMoma.PaintHolde
             StorageReference imagenes = firebaseStorage.getReference();
 
 
-      /*      GlideApp.with(itemView.getContext())
+            GlideApp.with(itemView.getContext())
                     .load(imagenes.child(paint.getImage()))
                     .into(imageView);
-*/
-            Glide.with(itemView.getContext()).load(imagenes.child(paint.getImage())).into(imageView);
+
+            //Glide.with(itemView.getContext()).load(imagenes.child(paint.getImage())).into(imageView);
             
         }
     }
