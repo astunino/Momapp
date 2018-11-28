@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Momapp</string>
+    <string name="app_name">MoMApp</string>
+    <string name="chat">Chat</string>
+    <string name="user">User</string>
     <string name="facebook_app_id">505108053228812</string>
     <string name="fb_login_protocol_scheme">fb505108053228812</string>
 

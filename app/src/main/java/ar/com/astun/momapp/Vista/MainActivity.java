@@ -73,17 +73,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         // BUCAR COMPONENTES
-        imageViewFacebook = findViewById(R.id.imageViewFacebook);
-        textViewNombreFacebook = findViewById(R.id.textViewNombreFacebook);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+//        imageViewFacebook = findViewById(R.id.imageViewFacebook);
+//        textViewNombreFacebook = findViewById(R.id.textViewNombreFacebook);
+//        FloatingActionButton fab = findViewById(R.id.fab);
+/*        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 LoginManager.getInstance().logOut();
             }
         });
-
+*/
 
 
         //LOGIN CON FACEBOOK
@@ -132,18 +132,18 @@ public class MainActivity extends AppCompatActivity {
 
             Profile profile = Profile.getCurrentProfile();
             if (profile != null) {
-                textViewNombreFacebook.setText(user.getDisplayName());
+      //          textViewNombreFacebook.setText(user.getDisplayName());
 
                 //Uri uri = profile.getProfilePictureUri(500, 500);
-                Uri uri = user.getPhotoUrl();
-                Glide.with(this).load(uri).into(imageViewFacebook);
+      //          Uri uri = user.getPhotoUrl();
+      //          Glide.with(this).load(uri).into(imageViewFacebook);
 
                 Intent intent = new Intent(MainActivity.this, PaintActivity.class);
                 startActivity(intent);
             }
         } else {
-            imageViewFacebook.setImageDrawable(null);
-            textViewNombreFacebook.setText("");
+      //      imageViewFacebook.setImageDrawable(null);
+      //      textViewNombreFacebook.setText("");
         }
 
     }
