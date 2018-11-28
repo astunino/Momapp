@@ -41,8 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.PaintActivity"></activity>
-        <activity android:name=".Vista.PaintDetalleActivity"></activity>
+        <activity android:name=".Vista.PaintActivity" />
+        <activity android:name=".Vista.PaintDetalleActivity" />
+        <activity android:name=".Vista.LoginActivity" />
     </application>
 
 </manifest>

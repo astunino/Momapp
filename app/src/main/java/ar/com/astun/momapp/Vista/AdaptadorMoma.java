@@ -1,6 +1,5 @@
 package ar.com.astun.momapp.Vista;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,18 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import ar.com.astun.momapp.Modelo.Artist;
 import ar.com.astun.momapp.Modelo.Paint;
 import ar.com.astun.momapp.R;
 import ar.com.astun.momapp.Util.GlideApp;
@@ -35,7 +27,6 @@ public class AdaptadorMoma extends RecyclerView.Adapter<AdaptadorMoma.PaintHolde
         this.paintList = paintList;
         this.listener = listener;
     }
-
 
     public void setPaintList(List<Paint> paintList) {
         this.paintList = paintList;

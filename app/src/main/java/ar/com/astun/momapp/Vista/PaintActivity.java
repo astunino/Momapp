@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,6 +36,7 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
         final AdaptadorMoma adaptadorPaint = new AdaptadorMoma(this,datos);
         final ControladorPaint controllerPaint = new ControladorPaint();
 
+        TextView textViewUser = findViewById(R.id.textViewUser);
 
         controllerPaint.traerPaints(this, new ResultListener<List<Paint>>() {
             @Override
@@ -45,24 +47,20 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.fabPaint);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                LoginManager.getInstance().logOut();
-
-                Intent intent = new Intent(PaintActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(adaptadorPaint);
+
+        textViewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaintActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
