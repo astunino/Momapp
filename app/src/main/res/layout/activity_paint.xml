@@ -4,39 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".Vista.PaintActivity">
+
+    <TextView
+        android:id="@+id/textViewChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textColor="#ff95fc"
+        android:textSize="20sp"
+        android:layout_gravity="top|start"/>
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:textColor="#ff95fc"
+        android:textSize="20sp"
+        android:layout_gravity="top|end"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chat"
-                android:gravity="start"
-                android:textStyle="bold"
-                android:textColor="#ff95fc"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/textViewUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/user"
-                android:gravity="end"
-                android:textStyle="bold"
-                android:textColor="#ff95fc"
-                android:textSize="18sp"/>
-
-        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"

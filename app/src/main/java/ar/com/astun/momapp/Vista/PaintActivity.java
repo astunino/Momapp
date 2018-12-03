@@ -1,20 +1,12 @@
 package ar.com.astun.momapp.Vista;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import com.facebook.login.LoginManager;
-import com.google.firebase.auth.FirebaseAuth;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +29,7 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
         final ControladorPaint controllerPaint = new ControladorPaint();
 
         TextView textViewUser = findViewById(R.id.textViewUser);
+        TextView textViewChat = findViewById(R.id.textViewChat);
 
         controllerPaint.traerPaints(this, new ResultListener<List<Paint>>() {
             @Override
@@ -58,6 +51,14 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PaintActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        textViewChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaintActivity.this, ChatActivity.class);
                 startActivity(intent);
             }
         });

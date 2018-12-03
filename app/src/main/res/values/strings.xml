@@ -2,6 +2,11 @@
     <string name="app_name">MoMApp</string>
     <string name="chat">Chat</string>
     <string name="user">User</string>
+    <string name="obra">Obra: </string>
+    <string name="artist">Artista: </string>
+    <string name="mensaje">Ingrese mensaje...</string>
+    <string name="influencedBy">Influencia: </string>
+    <string name="nacionality">Nacionalidad: </string>
     <string name="facebook_app_id">505108053228812</string>
     <string name="fb_login_protocol_scheme">fb505108053228812</string>
 

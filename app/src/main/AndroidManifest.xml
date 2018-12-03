@@ -44,6 +44,7 @@
         <activity android:name=".Vista.PaintActivity" />
         <activity android:name=".Vista.PaintDetalleActivity" />
         <activity android:name=".Vista.LoginActivity" />
+        <activity android:name=".Vista.ChatActivity" />
     </application>
 
 </manifest>

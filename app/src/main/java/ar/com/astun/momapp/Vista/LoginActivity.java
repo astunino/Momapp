@@ -26,11 +26,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
         TextView textViewNombrre = findViewById(R.id.textViewNombre);
         ImageView imageViewFoto = findViewById(R.id.imageViewFoto);
         ImageButton imageButton =findViewById(R.id.imageButtonCerrarSesion);
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         textViewNombrre.setText(currentUser.getDisplayName());
 

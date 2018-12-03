@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Vista.LoginActivity">
 
     <LinearLayout
@@ -12,10 +13,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_margin="20dp"
+            android:layout_marginTop="50dp"
             android:id="@+id/imageViewFoto"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"/>
 
@@ -24,18 +25,19 @@
             android:id="@+id/textViewNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="36sp"
             android:layout_gravity="center"/>
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/imageButtonCerrarSesion"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="fitXY"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/logout"
-        android:layout_gravity="bottom|end"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/logout" />
 
 </FrameLayout>

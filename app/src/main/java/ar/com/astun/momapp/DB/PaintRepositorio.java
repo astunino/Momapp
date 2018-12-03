@@ -7,7 +7,6 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
-import ar.com.astun.momapp.DB.AppDatabase;
 import ar.com.astun.momapp.Modelo.Paint;
 
 public class PaintRepositorio {
@@ -50,8 +49,8 @@ public class PaintRepositorio {
         }.execute();
     }
 
-    public void deletePaint(final String name) {
-        final LiveData<Paint> paint = getPaint(name);
+    public void deletePaint(final Integer id) {
+        final LiveData<Paint> paint = getPaint(id);
         if(paint != null) {
             new AsyncTask<Void, Void, Void>() {
                 @Override
@@ -63,8 +62,8 @@ public class PaintRepositorio {
         }
     }
 
-    public LiveData<Paint> getPaint(String name) {
-        return appDatabase.daoDBPaint().getPaint(name);
+    public LiveData<Paint> getPaint(Integer id) {
+        return appDatabase.daoDBPaint().getPaint(id);
     }
 
     public LiveData<List<Paint>> getPaints() {

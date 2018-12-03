@@ -18,12 +18,12 @@ public interface DaoDBPaint {
     Long insertPaint(Paint paint);
 
 
-    @Query("SELECT * FROM Paint ORDER BY name asc")
+    @Query("SELECT * FROM Paint ORDER BY id asc")
     LiveData<List<Paint>> fetchAllPaints();
 
 
-    @Query("SELECT * FROM Paint WHERE name =:taskId")
-    LiveData<Paint> getPaint(String taskId);
+    @Query("SELECT * FROM Paint WHERE id =:paintId")
+    LiveData<Paint> getPaint(Integer paintId);
 
 
     @Update
