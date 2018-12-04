@@ -34,7 +34,6 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
         controllerPaint.traerPaints(this, new ResultListener<List<Paint>>() {
             @Override
             public void finish(List<Paint> resultado) {
-                // DATOS
                 datos = resultado;
                 adaptadorPaint.setPaintList(datos);
             }
@@ -73,7 +72,6 @@ public class PaintActivity extends AppCompatActivity implements AdaptadorMoma.Ad
         bundle.putString(PaintDetalleActivity.KEY_ARTISTID, artistId);
         bundle.putString(PaintDetalleActivity.KEY_NAME, nombre);
         bundle.putString(PaintDetalleActivity.KEY_IMAGEN, imagen);
-        // CHECK IN
         intent.putExtras(bundle);
 
         startActivity(intent);

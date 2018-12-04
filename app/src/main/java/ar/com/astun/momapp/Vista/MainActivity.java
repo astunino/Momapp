@@ -69,39 +69,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-        //LOGIN CON FACEBOOK
         callbackManager = CallbackManager.Factory.create();
 
 
         loginButton = findViewById(R.id.login_button);
         loginButton.setReadPermissions("email", "public_profile");
-        // If using in a fragment
-        //loginButton.setFragment(this);
 
-        // Callback registration
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                // App code
 
                 handleFacebookAccessToken(loginResult.getAccessToken());
-
-
 
             }
 
             @Override
             public void onCancel() {
-                // App code
                 Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onError(FacebookException exception) {
-                // App code
                 Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
