@@ -1,16 +1,12 @@
 package ar.com.astun.momapp.Modelo;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
-import java.io.Serializable;
-import java.util.List;
 
 @Entity
-public class Paint implements Serializable {
+public class Paint {
 
     @PrimaryKey(autoGenerate = true)
     private Integer id;
@@ -18,10 +14,10 @@ public class Paint implements Serializable {
     private String name;
     private String artistId;
 
+    @Ignore
     public Paint() {
     }
 
-    @Ignore
     public Paint(Integer id,String image, String name, String artistId){
         this.id=id;
         this.image=image;
@@ -43,22 +39,6 @@ public class Paint implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setArtistId(String artistId) {
-        this.artistId = artistId;
     }
 
 }

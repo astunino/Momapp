@@ -1,18 +1,27 @@
 package ar.com.astun.momapp.Modelo;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Artist {
+@Entity
+public class Artist  {
 
+    @PrimaryKey(autoGenerate = true)
+    private Integer id;
     private String influencedBy;
     private String artistId;
     private String name;
     private String nationality;
 
+    @Ignore
     public Artist() {
     }
 
-    public Artist(String influencedBy, String artistId, String name, String nationality) {
+    public Artist(Integer id,String influencedBy, String artistId, String name, String nationality) {
+        this.id=id;
         this.influencedBy = influencedBy;
         this.artistId = artistId;
         this.name = name;
@@ -33,5 +42,9 @@ public class Artist {
 
     public String getNationality() {
         return nationality;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
